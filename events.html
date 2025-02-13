@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <script src="script2.js" defer></script>
+    <title>EVENTS</title>
+  </head>
+  <body>
+    <!--<nav class="nav">
+      <div class="nav__logo">
+        <img src="elements/logo transparent.png" alt="Logo" />
+        <div class="nav_text">
+            <h2>ELYSIUM</h2>
+        </div> 
+      </div>      
+      <a href="#" class="nav__hamburger">
+        <span class="nav__hamburger__line"></span>
+        <span class="nav__hamburger__line"></span>
+        <span class="nav__hamburger__line"></span>
+      </a>
+      <div class="nav__menu">
+        <ul>
+          <li class="nav__menu__link"><a href="#home">HOME</a></li>
+          <li class="nav__menu__link"><a href="#event">EVENTS</a></li>
+          <li class="nav__menu__link"><a href="#team">TEAM</a></li>
+          <li class="nav__menu__link"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0e0e10;
+            color: white;
+            padding-top: 70px; /* Prevent content from hiding under navbar */
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Navigation Links */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Glow Effect on Hover */
+        .menu a:hover {
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        /* Hamburger Menu */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+                padding: 15px 0;
+                box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            }
+
+            .menu a {
+                padding: 15px;
+                display: block;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+
+            /* Hamburger Animation */
+            #menu-toggle:checked ~ .menu-icon div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #menu-toggle:checked ~ .menu-icon div:nth-child(2) {
+                opacity: 0;
+            }
+
+            #menu-toggle:checked ~ .menu-icon div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        /* Content Placeholder */
+        .content {
+            text-align: center;
+            padding: 100px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- Logo and Name -->
+        <div class="logo">
+            <img src="elements/logo transparent.png" alt="Logo">
+            ELYSIUM
+        </div>
+
+        <!-- Checkbox for menu toggle -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Hamburger Icon -->
+        <label for="menu-toggle" class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <div class="menu">
+            <a href="index.html">HOME</a>
+            <a href="events.html">EVENTS</a>
+            <a href="teams.html">TEAM</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="bg"></div>
+    <h1 class="title">Technical Events</h1>
+    <div class="container">
+        <!-- Technical Events -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Tech Quest.jpg');"></div>
+                <div class="card-back">
+                    <h2>TECH QUEST</h2>
+                    <p>A competitive quiz testing technical knowledge and innovations</p>
+                    <!-- From Uiverse.io by Madflows --> 
+<button class="button">
+    <span class="button-content">DETAILS </span>
+  </button>
+  
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Frontend fiesta.jpg');"></div>
+                <div class="card-back">
+                    <h2>FRONTEND FIESTA</h2>
+                    <p>A challenge to design and develop innovative web applications</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/bug brawl.jpg');"></div>
+                <div class="card-back">
+                    <h2>BUG BRAWL</h2>
+                    <p>A timed competition to identify and fix code errors</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/code bid.jpg');"></div>
+                <div class="card-back">
+                    <h2>CODE BID</h2>
+                    <p>A unique event where participants bid on coding problems and solve them</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/whiteboard worriors.jpg');"></div>
+                <div class="card-back">
+                    <h2>WHITEBOARD WARRIORS</h2>
+                    <p>A platform to present research and innovative technical ideas.</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Verbal Vortex.jpg');"></div>
+                <div class="card-back">
+                    <h2>VERBAL VORTEX</h2>
+                    <p>A discussion-based event on emerging technologies and trends.</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Technical Events -->
+        <h1 class="title">Non-Tech Events</h1>
+        <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Aurora vibes.jpg');"></div>
+                <div class="card-back">
+                    <h2>AURORA VIBES</h2>
+                    <p>A vibrant celebration of music with live performances and competitions</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Booyah BAsh.jpg');"></div>
+                <div class="card-back">
+                    <h2>BOOYAH BASH</h2>
+                    <p>An intense battle royale gaming showdown.</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Aggressive shooters.jpg');"></div>
+                <div class="card-back">
+                    <h2>AGRESSUVE SHOOTERS</h2>
+                    <p>A fast-paced, small-format cricket challenge.</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/hidden horizons.jpg');"></div>
+                <div class="card-back">
+                    <h2>HIDDEN HORIZONS</h2>
+                    <p>A thrilling quest to decode clues and find hidden treasure</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/cinema clash.jpg');"></div>
+                <div class="card-back">
+                    <h2>CINEMA CLASH</h2>
+                    <p>A fun challenge testing movie knowledge and pop culture</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('Event Images/Spin a story.jpg');"></div>
+                <div class="card-back">
+                    <h2>SPIN-A-STORY</h2>
+                    <p>A creative storytelling contest with unexpected twists</p>
+                    <button class="button">
+                        <span class="button-content">DETAILS </span>
+                      </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<video autoplay loop muted playsinline class="bg-video">
+    <source src="elements/0_Futuristic_Abstract_1920x1080.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <style>
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+  <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 ELYSIUM. All rights reserved.</p>
+        <p>Designed by <a href="https://www.linkedin.com/in/guruprasath-j-9006b3277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">GURUPRASATH J</a></p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

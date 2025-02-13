@@ -1,0 +1,331 @@
+/* General Layout */
+body {
+  background-color:url(images/6912604_Motion Graphics_Motion Graphic_1920x1080.mp4);
+  font-family: "Caveat", serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  flex-grow: 1;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 60px; /* To ensure there's space below navbar */
+}
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  height: 320px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 300ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.card-content {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+/* Image inside the card */
+.card-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Name and Role */
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.role {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Glowing effect */
+.card::before {
+  opacity: 0;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 360px;
+  background: linear-gradient(#ff2288, #387ef0);
+  transition: opacity 300ms;
+  animation: rotation_9018 8000ms infinite linear;
+  animation-play-state: paused;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.card::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 250px;
+  height: 360px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+}
+
+/* Animation for glowing */
+@keyframes rotation_9018 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #171717;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsiveness for smaller devices */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .grid {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+/* General Layout */
+body {
+  background-color:url(images/6912604_Motion Graphics_Motion Graphic_1920x1080.mp4);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  color: white;
+  cursor: url('images/kisspng-valentine-s-day-clip-art-cupid-5abcbb25121d74.7867578915223181170742 (1).png'), auto;
+}
+
+.container {
+  flex-grow: 1;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 60px; /* To ensure there's space below navbar */
+}
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  height: 320px;
+  background:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 300ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #171717;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsiveness for smaller devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px; /* Removed height: auto to maintain hover effect */
+  }
+}
+/* Default navigation for larger screens */
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav__hamburger {
+  display: none; /* Hide hamburger menu on large screens */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .nav__menu {
+    display: none; /* Hide normal nav links in mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 3.2rem;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .nav__menu.active {
+    display: flex;
+  }
+
+  .nav__hamburger {
+    display: flex; /* Show hamburger menu in mobile */
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.875rem;
+    height: 1.313rem;
+    cursor: pointer;
+  }
+}
+a:hover, button:hover {
+  cursor: url('images/transparent-cupid-arrow-cute-heart-and-arrow-symbolizing-lovepassion65a0a07faa73a9.1900929417050256636982 (1).png'), pointer;
+}
+/* Responsiveness for smaller devices */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: row; /* Keep elements aligned in a row */
+      justify-content: space-between;
+      padding: 10px 20px; /* Reduce padding for smaller screens */
+  }
+  .grid {
+      display: grid; /* Ensure it's a grid container */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column sizing */
+      gap: 10px; /* Maintain spacing */
+  }
+}
+/* Grid Layout - Ensuring it works properly */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Mobile-friendly grid adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns */
+    gap: 10px; /* Maintain spacing */
+  }
+}
+/* Grid Layout - Ensuring it works properly */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Mobile-friendly grid adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns */
+    gap: 10px; /* Maintain spacing */
+  }
+}

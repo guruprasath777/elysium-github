@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Caveat", serif;
+    background: url('your-background.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: visible;
+    position: relative;
+    cursor: url('images/kisspng-valentine-s-day-clip-art-cupid-5abcbb25121d74.7867578915223181170742 (1).png'), auto;
+}
+a:hover, button:hover {
+    cursor: url('images/transparent-cupid-arrow-cute-heart-and-arrow-symbolizing-lovepassion65a0a07faa73a9.1900929417050256636982 (1).png'), pointer;
+}
+
+/* Dark Overlay to Improve Readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+/*navbar
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+  }
+  
+  .nav {
+    height: 3.2rem;
+    display: flex;
+    justify-content: center; /* Centers the menu horizontally
+    align-items: center;
+    color: #fff;
+    position: fixed; /* Fix the navbar at the top
+    width: 100%;
+    backdrop-filter: blur(10px); /* Applies blur to the background */
+   /* background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    /*z-index: 1; /* Keeps the navbar above other content */
+   /* border-radius: 10px; /* Optional: adds rounded corners */
+    /*padding: 0 1rem; /* Adds padding to prevent content from touching the edges */
+  /*}
+  
+  .nav__logo {
+    font-size: 1.5rem;
+    margin-right: auto; /* Pushes the logo to the left */
+  /*}
+  
+  .nav__menu {
+    display: flex;
+    justify-content: center; /* Centers the menu items horizontally */
+    /*flex-grow: 1; /* Ensures the menu items take up remaining space */
+  /*}
+  
+  .nav__menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav__menu ul li {
+    list-style: none;
+  }
+  
+  .nav__menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+  }
+  
+  .nav__menu li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter hover effect */
+  /*}
+  
+  .nav__hamburger {
+    width: 1.875rem;
+    height: 1.313rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .nav__hamburger__line {
+    height: 0.188rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  /*@media screen and (max-width: 550px) {
+    .nav__hamburger {
+      display: flex;
+    }
+    .nav__menu {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      top: -10rem;
+      width: 100%;
+      transition: all ease-in-out 0.4s;
+      justify-content: center; /* Centers the menu horizontally */
+    /*}
+    .nav {
+      flex-direction: column;
+      align-items: center; /* Centers everything vertically */
+   /* }
+    .nav__menu ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 3rem 0 0.6rem;
+    }
+    .nav__menu ul li {
+      text-align: center;
+    }
+    .nav__menu ul li a {
+      padding: 0.5rem;
+    }
+    .nav__menu {
+      z-index: -1;
+    }
+    .nav__menu.active {
+      top: 0;
+    }
+    .nav__hamburger.active :nth-child(1) {
+      transform: rotate(45deg) translate(0.45rem, 0.1875rem);
+    }
+  
+    .nav__hamburger.active :nth-child(2) {
+      opacity: 0;
+    }
+  
+    .nav__hamburger.active :nth-child(3) {
+      transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+    }
+  }
+  .nav__logo {
+    margin-right: auto; /* Pushes logo to the left */
+  /*}
+  
+  .nav__logo img {
+    height: 2.5rem; /* Adjust this value to control logo height */
+    /*width: auto; /* Maintains aspect ratio */
+    /*object-fit: contain; /* Ensures the image fits without distortion */
+    /*display: block; /* Removes any unwanted space below the image */
+ /* }
+  
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff66cc;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ddd;
+}
+/* Sponsors Section */
+.sponsors-section {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.sponsors-section h2 {
+    font-size: 32px;
+    color: #ff66cc;
+    margin-bottom: 20px;
+}
+
+.sponsors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sponsor-logo {
+    width: 150px;
+    margin: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    opacity: 1;
+}
+
+/* Map Section */
+.map-section {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #ff66cc;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Letter Animations */
+.animate-text {
+    display: inline-block;
+    animation: textAnimation 2s forwards;
+    opacity: 0;
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active + .nav-links {
+        display: flex;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    .info-box {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+/* Fade In and Slide Up Animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text {
+    display: inline-block;
+    animation: fadeInSlideUp 1.5s ease-in-out forwards;
+}
+
+/* Text Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing-text {
+    display: inline-block;
+    overflow: visible;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+/* Blinking Cursor Effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Glowing Text Effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff66cc;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff99cc;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff66cc;
+    }
+}
+
+.glowing-text {
+    animation: glow 2s infinite alternate;
+}
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #444;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect */
+#map:hover {
+    transform: scale(1.02);
+}
+
+/* Custom loading animation while the map loads */
+#map::before {
+    content: "Loading Map...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 1;
+}
+.contact-form button {
+    --bg: #000;
+    --hover-bg: #ff90e8;
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Glow for text */
+}
+
+.contact-form button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem 15px rgba(255, 255, 255, 0.8); /* Glowing shadow effect */
+    text-shadow: 0 0 15px #ff90e8, 0 0 20px #ff90e8; /* Glowing text */
+}
+
+.contact-form button:active {
+    transform: translate(0);
+    box-shadow: none;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Reduced glow when active */
+}
+/* styles.css */
+
+/* Center the progress circle */
+#progress-circle-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+#progress-circle {
+    transform: rotate(-90deg); /* Starts the circle from the top */
+}
+
+#progress-bar {
+    transition: stroke-dashoffset 0.25s linear;
+}
+
+#progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #ff00c3;
+}
+
+/* Button Styling */
+.Btn {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#e002f4, #ea00ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+}
+
+.arrow path {
+    fill: white;
+}
+
+.text {
+    font-size: 0.7em;
+    width: 100px;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -18px;
+    opacity: 0;
+    transition-duration: .7s;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    transition-duration: .7s;
+}
+
+.Btn:hover .arrow {
+    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hide button initially when not at bottom of page */
+#back-to-top {
+    display: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Default is hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex !important; /* Force it to show */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+}
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Initially hidden off-screen */
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        transition: left 0.3s ease-in-out;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        left: 0; /* Slides in */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 10000;
+    }
+}
+
