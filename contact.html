@@ -224,24 +224,60 @@
             <div class="contact-info">
                 <div class="info-box">
                     <h3 class="animate-text">ADDRESS</h3>
-                    <p>123 Symposium Street, Event City, Country</p>
+                    <p>Velammal Institute of Technology, Chennai-Kolkota Highway</p>
                 </div>
                 <div class="info-box">
                     <h3 class="animate-text">EMAIL</h3>
-                    <p>info@symposium.com</p>
+                    <p>elysium2k25official@gmail.com</p>
                 </div>
                 <div class="info-box">
                     <h3 class="animate-text">PHONE</h3>
-                    <p>+123 456 7890</p>
+                    <p> 
+                    +91 76038 51142<br>
+                    +91 81483 83361
+                        </p>
                 </div>
             </div>
-            <form class="contact-form">
+            
+            <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                 <h2 class="animate-text">Send Us a Message</h2>
+        
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="c484e987-04b3-496a-9b33-60d5f149dcc2">
+        
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        
                 <button class="submitbutton" type="submit">Submit :)</button>
+        
+                <!-- Success message (Hidden initially) -->
+                <p id="success-message" style="display: none;">Your message has been sent successfully! ✅</p>
             </form>
+        
+            <script>
+                const form = document.getElementById("contact-form");
+                const successMessage = document.getElementById("success-message");
+        
+                form.addEventListener("submit", async (event) => {
+                    event.preventDefault();
+                    successMessage.style.display = "none"; // Hide message before submission
+        
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                    });
+        
+                    const result = await response.json();
+                    if (result.success) {
+                        successMessage.style.display = "block"; // Show success message
+                        form.reset();
+                    } else {
+                        alert("Something went wrong. Please try again.");
+                    }
+                });
+            </script>          
         </div>
     </section>
 
@@ -249,9 +285,9 @@
     <section class="sponsors-section">
         <h2 class="animate-text">Sponsors</h2>
         <div class="sponsors">
-            <img src="sponsor1.png" alt="Sponsor 1" class="sponsor-logo">
-            <img src="sponsor2.png" alt="Sponsor 2" class="sponsor-logo">
-            <img src="sponsor3.png" alt="Sponsor 3" class="sponsor-logo">
+            <img src="elements/logo transparent.png" alt="Sponsor 1" class="sponsor-logo">
+            <img src="elements/logo transparent.png" alt="Sponsor 2" class="sponsor-logo">
+            <img src="elements/logo transparent.png" alt="Sponsor 3" class="sponsor-logo">
         </div>
     </section>
 
@@ -259,7 +295,7 @@
     <section class="map-section">
         <h2 class="animate-text">Find Us Here</h2>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.3740061506155!2d-122.40873818468103!3d37.774929179758064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f7f3a147b%3A0x66e3f62a40668fd8!2sSymposium%20Street!5e0!3m2!1sen!2sus!4v1674304779151!5m2!1sen!2sus" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.8963707313364!2d80.14929769999999!3d13.2944135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527efa08e09967%3A0xc1b057bb21ab2483!2sVelammal%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1739560351282!5m2!1sen!2sin" 
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
@@ -343,18 +379,6 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <!-- Icons Section -->
-            <div class="footer-icons">
-                <div class="icon">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <span>Agenda</span>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-bus"></i>
-                    <span>Transport</span>
-                </div>
-            </div>
-    
             <!-- Landscape Image -->
             <div class="footer-image">
                 <img src="images/footer image.png" alt="Landscape Image">
@@ -363,7 +387,7 @@
             <!-- Copyright & Credit -->
             <div class="footer-bottom">
                 <p>© 2025 ELYSIUM | Designed by 
-                    <a href="https://yourportfolio.com" target="_blank">Guruprasath J</a>
+                    <a href="https://www.linkedin.com/in/guruprasath-j-9006b3277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Guruprasath J</a>
                 </p>
             </div>
     
