@@ -186,7 +186,7 @@ footer {
     border-radius: inherit;
     background: linear-gradient(
       82.3deg,
-      rgba(150, 93, 233, 1) 10.8%, /* Purple gradient */
+      rgb(92, 0, 184) 10.8%, /* Purple gradient */
       rgba(255, 215, 0, 1) 94.3%   /* Gold gradient */
     );
     transition: all 0.475s;
