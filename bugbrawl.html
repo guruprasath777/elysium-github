@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2c003e, #4c0077);
+            color: #ddd;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(255, 223, 94, 0.5);
+            width: 100%;
+        }
+
+        /* Poster Image */
+        .event-poster {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .event-poster img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-right: 5px solid #f8d568;
+        }
+
+        /* Event Details */
+        .event-details {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-size: 24px;
+            color: #f8d568;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            border-bottom: 2px solid #f8d568;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        p, .info p {
+            font-size: 15px;
+            margin: 8px 0;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* Icons for Event Info */
+        .info p i {
+            color: #f8d568;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f8d568;
+        }
+
+        /* Register Button */
+        .register-btn {
+            display: block;
+            padding: 14px;
+            background: linear-gradient(45deg, #f8d568, #d1a536);
+            color: #2c003e;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            width: 90%;
+            max-width: 280px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .register-btn:hover {
+            background: #b98c29;
+            transform: scale(1.05);
+        }
+
+        /* Coordinator Info Section */
+        .coordinators {
+            margin-top: 20px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .coordinators h3 {
+            font-size: 18px;
+            color: #f8d568;
+            margin-bottom: 10px;
+        }
+
+        .coordinators p {
+            font-size: 16px;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .coordinators p i {
+            color: #f8d568;
+        }
+
+        /* Rules Section */
+        .rules-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .rules-img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(255, 223, 94, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rules-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .event-container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .event-poster {
+                border-right: none;
+                border-bottom: 5px solid #f8d568;
+                width: 100%;
+            }
+
+            .event-poster img {
+                width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            .event-details {
+                text-align: center;
+                padding: 20px;
+            }
+
+            h1, h2 {
+                font-size: 20px;
+            }
+
+            p, .info p {
+                font-size: 14px;
+                gap: 5px;
+            }
+
+            .register-btn {
+                font-size: 14px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="event-container">
+    <!-- Event Poster -->
+    <div class="event-poster">
+        <img src="eventposters/WhatsApp Image 2025-02-14 at 11.25.47_84a00242.jpg" alt="Event Poster">
+    </div>
+
+    <!-- Event Details -->
+    <div class="event-details">
+        <h1>Event Name</h1>
+        <h2>Event Details</h2>
+
+        <div class="info">
+            <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> March 7, 2025</p>
+            <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 3:00 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong> Hall A, XYZ Auditorium</p>
+            <p><i class="fas fa-users"></i> <strong>Team Limit:</strong> </p>
+        </div>
+
+        <a href="#" class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
+
+        <!-- Coordinator Info -->
+        <div class="coordinators">
+            <h3>Coordinator Contacts</h3>
+            <p><i class="fas fa-user"></i> <strong>Name:</strong> John Doe</p>
+            <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +123 456 7890</p>
+        </div>
+
+        <div class="rules-section">
+            <h2>Event Rules</h2>
+            <img class="rules-img" src="rules-image.jpg" alt="Event Rules">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
