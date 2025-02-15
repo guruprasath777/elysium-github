@@ -329,3 +329,11 @@ a:hover, button:hover {
     gap: 10px; /* Maintain spacing */
   }
 }
+h2 {
+  font-size: 24px; /* Smaller text */
+  color: white; /* White inner text */
+  text-shadow: 
+      0px 0px 5px #00ff00,  
+      0px 0px 10px #00ff00; /* Neon green glow */
+  background: none; /* No background */
+}
