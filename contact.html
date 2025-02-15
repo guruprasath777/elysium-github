@@ -349,15 +349,22 @@
         
         /* Landscape Image */
         .footer-image {
-            margin-top: 20px;
-        }
-        
-        .footer-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-        }
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-image img {
+    width: 50%; /* Reduced size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Increased glow effect */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.footer-image img:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
+}
+
         
         /* Footer Bottom */
         .footer-bottom {

@@ -182,7 +182,7 @@
         </div>
     </nav>
     <div class="bg"></div>
-    <h1 class="title">Technical Events</h1>
+    <h1 class="title1">Technical Events</h1>
     <div class="container">
         <!-- Technical Events -->
         <div class="card">
@@ -279,7 +279,7 @@
         </div>
 
         <!-- Non-Technical Events -->
-        <h1 class="title">Non-Tech Events</h1>
+        <h1 class="title2">Non-Tech Events</h1>
         <div class="container">
         <div class="card">
             <div class="card-inner">
@@ -373,7 +373,7 @@
     </div>
 </div>
 <video autoplay loop muted playsinline class="bg-video">
-    <source src="elements/1118526_4k_Telecommunications_1280x720.mp4" type="video/mp4">
+    <source src="elements/0_Futuristic_Abstract_1920x1080.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <style>
@@ -438,15 +438,22 @@
     
     /* Landscape Image */
     .footer-image {
-        margin-top: 20px;
-    }
-    
-    .footer-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    }
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-image img {
+    width: 50%; /* Reduced size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Increased glow effect */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.footer-image img:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
+}
+
     
     /* Footer Bottom */
     .footer-bottom {
@@ -468,17 +475,6 @@
 <!-- Footer -->
 <footer>
     <div class="footer-container">
-        <!-- Icons Section -->
-        <div class="footer-icons">
-            <div class="icon">
-                <i class="fa-solid fa-calendar-days"></i>
-                <span>Agenda</span>
-            </div>
-            <div class="icon">
-                <i class="fa-solid fa-bus"></i>
-                <span>Transport</span>
-            </div>
-        </div>
 
         <!-- Landscape Image -->
         <div class="footer-image">

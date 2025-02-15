@@ -31,6 +31,20 @@ body {
     font-weight: bold;
     display: block;
 }
+.title1{
+    color: white; /* White inner text */
+    text-shadow: 
+        0px 0px 5px red,  /* Soft red glow */
+        0px 0px 10px red, /* Medium red glow */
+        0px 0px 15px red; /* Stronger red glow */
+}
+.title2{
+    color: white; /* White inner text */
+    text-shadow: 
+        0px 0px 5px rgb(4, 171, 255),  /* Soft red glow */
+        0px 0px 10px rgb(4, 171, 255), /* Medium red glow */
+        0px 0px 15px rgb(4, 171, 255); /* Stronger red glow */
+}
 
 /* Container for event cards */
 .container {
