@@ -7,7 +7,11 @@ body {
     text-align: center;
     color: white;
     padding-top: 4rem; /* Ensures content starts below navbar */
+    cursor: url('images/kisspng-valentine-s-day-clip-art-cupid-5abcbb25121d74.7867578915223181170742 (1).png'), auto;
 }
+a:hover, button:hover {
+    cursor: url('images/transparent-cupid-arrow-cute-heart-and-arrow-symbolizing-lovepassion65a0a07faa73a9.1900929417050256636982 (1).png'), pointer;
+  }
 
 /* Background */
 .bg {
