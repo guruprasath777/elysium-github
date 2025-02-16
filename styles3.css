@@ -91,6 +91,24 @@ body {
   animation: rotation_9018 8000ms infinite linear;
   animation-play-state: paused;
 }
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  background: linear-gradient(#ff2288, #387ef0);
+  transition: opacity 300ms;
+  animation: rotation_9018 8000ms infinite linear;
+  animation-play-state: paused;
+  
+}
+
+
 
 .card:hover::before {
   opacity: 1;
@@ -185,7 +203,6 @@ body {
   cursor: pointer;
   border-radius: 10px;
   transition: transform 300ms;
-  overflow: hidden;
 }
 
 .card:hover {
