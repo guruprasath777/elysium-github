@@ -18,7 +18,7 @@ h2 {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('images/6912604_Motion Graphics_Motion Graphic_1920x1080.mp4') no-repeat center center/cover;
+    background: url('') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,31 +58,31 @@ h2 {
 }
 
 .about-section {
-    background-image: url('assets/about-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
 }
 
 #department {
-    background-image: url('assets/department-bg.jpg');
+    background-image: url('');
 }
 
 #guest {
-    background-image: url('assets/guest-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
 }
 
 #promo {
-    background-image: url('assets/promo-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
 }
 
 #location {
-    background-image: url('assets/location-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
 }
 
 #follow {
-    background-image: url('assets/follow-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
 }
 
 #sponsors {
-    background-image: url('assets/sponsors-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
 }
 
 /* Footer */
@@ -236,7 +236,7 @@ h1, h2, h3 {
 /* Hero Section Styles */
 .hero {
     height: 100vh;
-    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    background: url(elements/images/compressed/3309587.webp) no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,44 +345,126 @@ h1, h2, h3 {
         font-size: 16px; /* Adjust event info font size for mobile */
     }
 }
-/* General Guidelines Section */
+/* ============================= */
+/* Global Styles for Consistency */
+/* ============================= */
+/* ============================= */
+/* General Guidelines Section    */
+/* ============================= */
 .guidelines-section {
-    padding: 40px 0;
+    padding: 60px 20px;
     text-align: center;
+    width: 100%;
+    
+    /* 🔹 SAME Background as Department Section */
+    background: url('elements/images/12_assda.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
 }
 
+/* Gradient Overlay for Smooth Transition */
+.guidelines-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: -1;
+}
+
+/* Container */
 .guidelines-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Title */
 .section-title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 25px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+/* Guidelines List */
 .guidelines-list {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: left;
+    max-width: 90%;
 }
 
 .guidelines-list li {
     font-size: 18px;
-    color: #444;
-    margin: 10px 0;
+    color: #333;
+    margin: 12px 0;
     line-height: 1.6;
+    padding-left: 30px;
+    position: relative;
 }
 
+/* Custom Bullet Points */
 .guidelines-list li::before {
     content: "✔";
-    color: #4caf50;
-    margin-right: 10px;
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 22px;
 }
+
+/* ============================= */
+/* Responsive Fixes              */
+/* ============================= */
+@media (max-width: 768px) {
+    #department, .guidelines-section {
+        background-attachment: scroll;
+    }
+
+    .guidelines-container {
+        max-width: 95%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .guidelines-list li {
+        font-size: 16px;
+        padding-left: 25px;
+    }
+
+    .guidelines-list li::before {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .guidelines-list li {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+
+    .guidelines-list li::before {
+        font-size: 18px;
+    }
+}
+
 .synthwave-laser-button {
     position: relative;
     padding: 10px 30px; /* Even smaller padding */
@@ -544,9 +626,25 @@ h1, h2, h3 {
 #about .subsection h3 {
     font-size: 28px; /* Increase font size for subsection headings */
 }
-/* Department Section */
+
+/* Global Fixes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+/* ========================== */
+/* Department Section (Top)   */
+/* ========================== */
 #department {
-    background-image: url('assets/department-bg.jpg');
+    position: relative;
+    background-image: url('elements/images/compressed/12_assda.webp'); /* Replace with actual image */
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -555,7 +653,9 @@ h1, h2, h3 {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding: 50px 20px;
+
 }
 
 /* Content Box */
@@ -597,76 +697,25 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    #department {
-        background-attachment: scroll; /* Prevents background freeze on tablets */
-        padding: 40px 15px;
-    }
-
-    #department h2 {
-        font-size: 28px;
-    }
-
-    #department p {
-        font-size: 22px;
-    }
-
-    #department img {
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 768px) {
-    #department {
-        min-height: 50vh;
-        padding: 30px 10px;
-    }
-
-    #department .content {
-        width: 95%;
-        padding: 15px;
-    }
-
-    #department h2 {
-        font-size: 26px;
-    }
-
-    #department p {
-        font-size: 20px;
-    }
-
-    #department img {
-        max-width: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    #department {
-        min-height: 45vh;
-        padding: 20px 5px;
-    }
-
-    #department h2 {
-        font-size: 24px;
-    }
-
-    #department p {
-        font-size: 18px;
-    }
-
-    #department img {
-        max-width: 300px;
-    }
-}
+/* ========================== */
+/* Guest Section (Below)      */
+/* ========================== */
 #guest {
     position: relative;
     padding: 80px 20px;
-    background-image: url('assets/guest-bg.jpg'); 
+    background-image: url('elements/images/compressed/12_assda.webp'); /* Ensure same image is used */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow */
+    margin-top: 0 !important; /* Removes unwanted space */
 }
 
 /* Background Overlay for Better Readability */
@@ -727,11 +776,30 @@ blockquote {
     font-size: 16px;
 }
 
-/* Responsive Design */
+/* ========================== */
+/* Responsive Design Fixes    */
+/* ========================== */
 @media (max-width: 1024px) {
-    .guest-container {
-        flex-direction: column;
-        text-align: center;
+    #department {
+        background-attachment: scroll; /* Prevents background freeze */
+        padding: 40px 15px;
+    }
+
+    #department h2 {
+        font-size: 28px;
+    }
+
+    #department p {
+        font-size: 22px;
+    }
+
+    #department img {
+        max-width: 400px;
+    }
+
+    #guest {
+        padding: 60px 15px;
+        background-attachment: scroll; /* Disable fixed background */
     }
 
     .chief-guest-img {
@@ -745,9 +813,30 @@ blockquote {
 }
 
 @media (max-width: 768px) {
+    #department {
+        min-height: 50vh;
+        padding: 30px 10px;
+    }
+
+    #department .content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #department h2 {
+        font-size: 26px;
+    }
+
+    #department p {
+        font-size: 20px;
+    }
+
+    #department img {
+        max-width: 350px;
+    }
+
     #guest {
-        padding: 60px 15px;
-        background-attachment: scroll; /* Disable fixed background on small screens */
+        padding: 50px 15px;
     }
 
     .chief-guest-img {
@@ -761,6 +850,27 @@ blockquote {
 }
 
 @media (max-width: 480px) {
+    #department {
+        min-height: 45vh;
+        padding: 20px 5px;
+    }
+
+    #department h2 {
+        font-size: 24px;
+    }
+
+    #department p {
+        font-size: 18px;
+    }
+
+    #department img {
+        max-width: 300px;
+    }
+
+    #guest {
+        padding: 40px 10px;
+    }
+
     .chief-guest-img {
         width: 140px;
         height: 140px;
@@ -786,7 +896,7 @@ section {
 
 /* Adds spacing between sections */
 section + section {
-    margin-top: 50px; /* Ensures each section follows the previous one */
+    margin-top:0px; /* Ensures each section follows the previous one */
 }
 
 /* Content Box (Used in All Sections) */
@@ -865,7 +975,7 @@ section p {
 }
 /* Promo Video Section */
 #promo {
-    background-image: url('assets/promo-bg.jpg');
+    background-image: url('elements/images/3309587.jpg');
     height: 60vh;
     display: flex;
     align-items: center;
@@ -922,7 +1032,7 @@ section p {
 }
 /* Event Location Section */
 #location {
-    background-image: url('assets/location-bg.jpg');
+    background-image: url('');
     height: 100vh; /* Full height for desktop */
     display: flex;
     align-items: center;
@@ -1053,7 +1163,7 @@ section p {
 }
 /* Sponsors Section */
 #sponsors {
-    background-image: url('assets/sponsors-bg.jpg');
+    background-image: url('elements/images/compressed/3309587.webp');
     height: 60vh;
     display: flex;
     align-items: center;
@@ -1123,8 +1233,8 @@ section p {
 }
 /* Convenor and Coordinators Section */
 #convenor-coordinators {
-    background-image: url('images/6912604_Motion Graphics_Motion Graphic_1920x1080.mp4');
-    height: auto; /* Change to auto for better mobile handling */
+    background-image: url('elements/images/compressed/3309587.webp');
+    height: auto; /* Ensures better mobile handling */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1133,13 +1243,23 @@ section p {
     background-size: cover;
     background-position: center;
     padding: 50px 20px;
-    margin-top: 30px; /* Ensures spacing from the previous section */
-    margin-bottom: 30px; /* Ensures bottom space on mobile */
+    margin: 0; /* Removes extra space from top and bottom */
+}
+
+/* Remove spacing issues with adjacent sections */
+#convenor-coordinators + * {
+    margin-top: 0;
+}
+
+#previous-section,
+#next-section {
+    margin: 0;
+    padding: 0;
 }
 
 /* Content Styling */
 #convenor-coordinators .content {
-    max-width: 100%; /* Slight overlay for readability */
+    max-width: 100%;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -1186,8 +1306,6 @@ section p {
 @media (max-width: 768px) {
     #convenor-coordinators {
         padding: 20px; /* Reduce padding for smaller screens */
-        margin-top: 20px; /* Reduced margin for mobile */
-        margin-bottom: 20px; /* Reduced bottom margin */
     }
 
     #convenor-coordinators h2 {
@@ -1211,10 +1329,11 @@ section p {
         margin-bottom: 10px;
     }
 }
+
 /* Footer Section with Parallax Effect */
 #footer {
     position: relative;
-    background-image: url('assets/footer-background.jpg'); /* Parallax background image */
+    background-image: url('elements/images/compressed/5452393.webp'); /* Parallax background image */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -1547,4 +1666,10 @@ body.loaded #preloader {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+.section {
+    background-image: url('elements/images/compressed/3309587.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
