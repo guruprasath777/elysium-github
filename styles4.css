@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family:  font-family: "Outfit", serif;
+    font-family:"Outfit", serif;
     background: url('your-background.gif') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
@@ -16,7 +16,11 @@ body {
 a:hover, button:hover {
     cursor: url('images/transparent-cupid-arrow-cute-heart-and-arrow-symbolizing-lovepassion65a0a07faa73a9.1900929417050256636982 (1).png'), pointer;
 }
-
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 /* Dark Overlay to Improve Readability */
 body::before {
     content: "";
