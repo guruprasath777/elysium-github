@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: "Caveat", serif;
+    font-family: "Outfit", serif;
     color: white;
     cursor: url('images/kisspng-valentine-s-day-clip-art-cupid-5abcbb25121d74.7867578915223181170742 (1).png'), auto;
 }
@@ -410,7 +410,7 @@ h1, h2, h3 {
 
 .guidelines-list li {
     font-size: 18px;
-    color: #333;
+    color: #000000;
     margin: 12px 0;
     line-height: 1.6;
     padding-left: 30px;
