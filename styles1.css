@@ -1699,3 +1699,11 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
+.coordinators-grid p {
+    white-space: nowrap; /* Prevent line break */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Adjust spacing */
+}
+
